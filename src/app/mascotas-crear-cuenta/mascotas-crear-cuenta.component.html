@@ -1,0 +1,30 @@
+<div id="divHeader">
+    <h1 class="tituloPrincipal">PRACTICA ANGULA + NET. CORE</h1>
+</div>
+<div>
+    <div class="container">
+        <form [formGroup]="mascotaNueva" (ngSubmit)="onSubmit()">
+            <div class="col-7" style="margin: 0 auto;">
+                <h2 class="text-center text-info">Agregar Mascota</h2>
+                <div>
+                    <div class="mb-3">
+                        <h3 class="text-success">Nombre mascota:</h3>
+                        <input formControlName="nombreMascota" type="text" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <h3 class="text-success">raza mascota:</h3>
+                        <input formControlName="razaMascota" type="text" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <h3 class="text-success">Edad Mascota:</h3>
+                        <input formControlName="edadMascota" type="number" min="1" max="100" class="form-control">
+                    </div>
+                    <div class="text-center">
+                        <button [disabled] = "!mascotaNueva.valid"type="submit" class="btn btn-primary">AGREGAR <i
+                                style="font-size: 18px;" class="bi bi-cart"></i></button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

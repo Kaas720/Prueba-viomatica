@@ -1,0 +1,53 @@
+<div id="divHeader">
+    <h1 class="tituloPrincipal">PRACTICA ANGULA + NET. CORE</h1>
+</div>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-5 col-lg-5 ">
+            <div class="col-7" style="margin: 0 auto;"> 
+                <h2 class="text-center text-info">Agregar Producto</h2>
+                <div>
+                    <div class="mb-3">
+                        <h3 class="text-success">Nombre producto:</h3>
+                        <select class="form-select" [(ngModel)]="opcionSeleccionado" (change)="capturar()">
+                            <option  *ngFor="let dato of productoData">
+                                {{dato.nombreProducto}}
+                            </option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <h3 class="text-success">Cantidad:</h3>
+                        <input [(ngModel)]="cantidad" type="number" min="1" max="100" class="form-control">
+                    </div>
+                    <div class="text-center">
+                        <button (click)="ingresarCamposTabla()" type="submit" class="btn btn-primary">Aceptar <i style="font-size: 18px;" class="bi bi-cart"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-7 col-lg-7" style="border: 1px solid blue; border-radius: 5px;">
+            <table class="table" id="tablaProducto">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre producto</th>
+                    <th scope="col">Precio U</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Precio F</th>
+                    <th scope="col">Eliminar</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                </tbody>
+              </table>
+              <div style="float: right; padding-right: 10px;">
+                <h4>Precio Final sin IVA: {{totalSinIva}} $</h4>
+                <h4>IVA 12%: {{IVA}} $</h4>
+                <h4>Precio Final con IVA: {{totalConIva}} $</h4>
+              </div>
+        </div>
+    </div>
+</div>
