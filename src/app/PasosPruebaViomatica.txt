@@ -1,0 +1,57 @@
+Crear Modulos ng g component Mascotass --module ../app
+ng serve --host 0.0.0.0  Copilar
+Pasos crar Proyecto Angular:
+ng new proyecto001
+2 Paso instalar angular material
+ng add @angular/material
+3 intalar botstrap
+npm install bootstrap jquery @popperjs/core
+"styles": [
+  "node_modules/bootstrap/dist/css/bootstrap.min.css",
+    ],
+
+    "scripts": [
+
+    "node_modules/jquery/dist/jquery.min.js",
+
+    "node_modules/@popperjs/core/dist/umd/popper.min.js",
+
+    "node_modules/bootstrap/dist/js/bootstrap.min.js"
+
+    ]
+4) Instalar iconos de boottrap
+npm i bootstrap-icons --save
+en styles importar 
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+
+
+Bostrap/*V*/
+col-12 col-sm-12 col-md-6 col-lg-6 para tamaño adaptativo
+ Como insertar tabla y eliminar https://es.stackoverflow.com/questions/382821/como-crear-botones-funcionales-de-eliminar-y-agregar-fila-en-una-tabla
+
+Obtener valores https://es.stackoverflow.com/questions/106280/como-obtener-el-valor-seleccionado-de-un-select-en-angular-4
+
+https://github.com/truizdiaz/FE-Mascotas  FRONT END DEL VIDEO
+https://github.com/truizdiaz/BE-Mascotas BACKEN DEL VIDEO
+https://github.com/Kaas720/EcuaFlims Mi proyecto EcauFilms
+https://github.com/Kaas720/ApisCrud Apis crud la prueba que realize
+https://github.com/Kaas720/Prueba-viomatica Prueba Viomatica
+
+
+https://www.youtube.com/watch?v=rubw8L6Hq9A
+Conectar .net Core
+1)primer paso dirigirse a la carpeta environments yal archivo environment.ts
+y escribimos  endpoint: 'https://localhost:7158/' debajo del false este es el puerto donde se ejecuta el net core
+2)en el app.module.ts importar import { HttpClientModule } from '@angular/common/http'; e importas poner el nombre
+3) luego se crea carpeta de servicio segun lo que vas a traer de info VideoPrueba / ng g s services/Producto
+https://www.youtube.com/watch?v=PdI5hF0yk3U
+4)Ahora se debe conectar al componente donde se va utilizar
+
+5) Ultimo en visual studio en program configurar los core 
+// Cors
+builder.Services.AddCors(options => options.AddPolicy("AllowWebapp",
+                                    builder => builder.AllowAnyOrigin()
+                                                    .AllowAnyHeader()
+                                                    .AllowAnyMethod()));
+app.UseCors("AllowWebapp");
