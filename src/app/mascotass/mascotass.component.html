@@ -1,0 +1,27 @@
+<app-componente-inicio></app-componente-inicio>
+
+<div class="container">
+   <h2>Mascotas</h2>
+   <button (click)="dirigirseAgregarMascotas()">Agregar mascotas</button>
+   <div>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre Mascota</th>
+            <th scope="col">Raza de la Mascota</th>
+            <th scope="col">Edad Mascota</th>
+          </tr>
+        </thead>
+        <tbody>
+                <tr *ngFor="let mascotasList of mascotas">
+                    <th scope="row">{{mascotasList.idMascotas}}</th>
+                    <td>{{mascotasList.nombreMascota}}</td>
+                    <td>{{mascotasList.razaMascota}}</td>
+                    <td>{{mascotasList.edadMascota}}</td>
+                </tr>
+        </tbody>
+      </table>
+   </div>
+</div>
+
